@@ -1,13 +1,13 @@
-document.getElementById("downloadButton").addEventListener("click", function() {
-  const pdfUrl = "/assets/atit-patel-resume.pdf"; // This should match the direct URL path that works
+// document.getElementById("downloadButton").addEventListener("click", function() {
+//   const pdfUrl = "/assets/atit-patel-resume.pdf"; // This should match the direct URL path that works
 
-  const downloadLink = document.createElement("a");
-  downloadLink.href = pdfUrl;
-  downloadLink.setAttribute("download", "atit-patel-resume.pdf"); // This suggests a default filename to save as
-  document.body.appendChild(downloadLink);
-  downloadLink.click();
-  document.body.removeChild(downloadLink);
-});
+//   const downloadLink = document.createElement("a");
+//   downloadLink.href = pdfUrl;
+//   downloadLink.setAttribute("download", "atit-patel-resume.pdf"); // This suggests a default filename to save as
+//   document.body.appendChild(downloadLink);
+//   downloadLink.click();
+//   document.body.removeChild(downloadLink);
+// });
 
 // 1
 document.addEventListener("DOMContentLoaded", () => {
