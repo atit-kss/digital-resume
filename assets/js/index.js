@@ -1,31 +1,13 @@
-document
-  .getElementById("downloadButton")
-  .addEventListener("click", function () {
-    // Specify the URL of the PDF file
-    const pdfUrl =
-      "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf";
+document.getElementById("downloadButton").addEventListener("click", function() {
+  const pdfUrl = "/assets/atit-patel-resume.pdf"; // This should match the direct URL path that works
 
-    // Create a temporary anchor element
-    const downloadLink = document.createElement("a");
-
-    // Set the href attribute to the PDF file URL
-    downloadLink.href = pdfUrl;
-
-    // Set the download attribute to force download
-    downloadLink.setAttribute(
-      "download",
-      "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
-    );
-
-    // Append the anchor element to the document body
-    document.body.appendChild(downloadLink);
-
-    // Programmatically trigger the click event on the anchor element
-    downloadLink.click();
-
-    // Remove the anchor element from the document body
-    document.body.removeChild(downloadLink);
-  });
+  const downloadLink = document.createElement("a");
+  downloadLink.href = pdfUrl;
+  downloadLink.setAttribute("download", "atit-patel-resume.pdf"); // This suggests a default filename to save as
+  document.body.appendChild(downloadLink);
+  downloadLink.click();
+  document.body.removeChild(downloadLink);
+});
 
 // 1
 document.addEventListener("DOMContentLoaded", () => {
